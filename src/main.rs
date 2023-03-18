@@ -4,14 +4,13 @@ use std::cmp::min;
 fn main() {
   let matches = App::new("ASCII Graphs")
     .version("1.0")
-    .author("Your Name <your.email@example.com>")
-    .about("Displays ASCII graphs (bar charts or line graphs) in the terminal")
+    .author("Jason <jason@rhombe.studio")
+    .about("Displays ASCII graphs in the terminal")
     .arg(
       Arg::new("graph_type")
         .short('t')
         .long("type")
         .value_name("GRAPH_TYPE")
-        // .about("Sets the graph type: 'bar' or 'line'")
         .required(true)
         .takes_value(true),
     )
@@ -20,7 +19,6 @@ fn main() {
         .short('v')
         .long("values")
         .value_name("VALUES")
-        // .about("Sets the values for the graph")
         .required(true)
         .multiple_values(true)
         .takes_value(true),
